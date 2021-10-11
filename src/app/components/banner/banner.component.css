@@ -1,0 +1,26 @@
+
+
+body{
+  background-image: none;
+}
+
+
+ngb-carousel{
+
+
+margin: auto;
+width: 70%;
+height: 50%;
+
+}
+
+img{ width: 98%;
+    height: 620px;
+    margin-top: 20px;
+
+
+}
+
+.texto{
+    font-size: x-large;
+}

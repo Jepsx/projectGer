@@ -1,0 +1,13 @@
+.table{
+margin: auto;
+width: 100%;
+color: #fff;
+
+}
+
+
+.modal-body{
+
+z-index: 1000;
+
+}

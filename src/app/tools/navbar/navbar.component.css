@@ -1,0 +1,121 @@
+.titulo{
+    font-family: 'Alfa Slab One', cursive;
+    color:white;
+    font-size: xx-large;
+
+}
+
+.IC{
+    font-family: 'Alfa Slab One', cursive;
+    color: black;
+
+
+}
+
+
+.R{
+    font-family: 'Alfa Slab One', cursive;
+    color: black;
+
+}
+
+.H{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.CS{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.H{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.AD{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.dropDown{
+
+  height: 10vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.projects{
+  position: relative;
+}
+.buttonS{
+  width: 30px;
+  height: 30px;
+  background-color: #fff !important;
+  border-style: solid !important;
+  border-color: #fff !important;
+  border-radius: 6px;
+
+}
+.buttonS svg{
+  padding: .5rem;
+}
+
+.buttonS, .buttonS svg:hover{
+  background-color: #555;
+  fill: #fff;
+  border-radius: 6px;
+}
+
+.projects ul{
+  margin-top: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all .4s ease;
+}
+
+.projects li{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  justify-content: left;
+  border-radius: 5px;
+}
+
+/* .projects li:hover{
+background-color: #555;
+
+} */
+
+.projects button:focus + ul{
+  opacity: 1;
+  pointer-events: visible;
+
+}
+
+.conPaid{
+position: fixed;
+z-index: 100;
+background-color: #555;
+width: 50%;
+margin-left:25%;
+padding: 10px;
+border-radius: 5px;
+}
+
+.navbar{
+    background-image: radial-gradient(circle at 50% 50%, #040606 0, #000000 50%, #000000 100%);
+    height: 150px;
+}
+

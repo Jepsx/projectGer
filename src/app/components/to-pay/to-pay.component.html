@@ -1,0 +1,36 @@
+<div class="containerPay">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope class="col">ID#</th>
+          <th scope class="col">Producto</th>
+          <th scope class="col">Precio</th>
+          <th scope class="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let i of menu; index as inD">
+          <th scope="row">{{i.id}}</th>
+          <td>{{i.titulo}}</td>
+          <td>{{i.price}}</td>
+          <td><button type="button" (click)='deleteP(inD)' class="btn btn-danger"><i class="fas fa-trash-alt fa-3x"></i></button>
+            <!-- <button type="button" class="btn btn-primary" (click)='edit(i.id,i.titulo,i.description,i.URL,i.price)'>Editar</button> -->
+            <!-- <button  (click)="modal(i.id,i.titulo,i.description,i.URL,i.price)" type="button" class="btn btn-primary"><i class="far fa-edit fa-2x"></i></button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="dinero">
+      <div>
+      <a>Dinero en Cartera: ${{cartera}}</a>
+      </div>
+      <div class="dinero__conDer">
+        <a>Total: ${{total}}</a>
+      </div>
+    </div>
+    <div class="buttonC">
+      <button class='cancel' (click)='cancel()' type='button'>Cancelar</button>
+      <button class='pay' (click)='paid()' type='button'>Pagar</button>
+
+    </div>
+  </div>

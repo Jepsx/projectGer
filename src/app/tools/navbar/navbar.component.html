@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <h2><a class="titulo navbar-brand" href="#">LED VIBES</a></h2>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div *ngIf="!authService.loggedIn(); else loggedIn" class="navbar-nav ml-auto">
+        <a class="nav-link IC" routerLink="/signin">Iniciar Sesion</a>
+          <a class="nav-link R" routerLink="/signup">Registrarse</a>
+
+      </div>
+      <ng-template #loggedIn>
+
+        <div class="dropDown">
+          <div
+
+          class="navbar-nav ml-auto"
+        >
+          <a  class="H nav-link" routerLink="/home">Home</a>
+          <a *ngIf="isAdmin()" class="AD nav-link" routerLink="/admin"
+            >Administrar</a>
+            <a *ngIf="!isAdmin()" class="H nav-link" (click)='toPay()'>Pay</a>
+          <a
+          class="CS nav-link"
+          style="cursor: pointer"
+          (click)="authService.logout()"
+          >Cerrar Sesión</a>
+        </div>
+
+
+          <div class="projects" *ngIf="!isAdmin()">
+          <button type='button' class="buttonS"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-bag-plus" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+          </svg></button>
+          <ul>
+            <li *ngFor='let i of menus'>{{i.titulo+'   $'+i.price}}</li>
+            <!-- <button type="button" class='generarP'>Generar pago</button> -->
+          </ul>
+        </div>
+        </div>
+
+
+      </ng-template>
+    </div>
+  </div>
+</nav>
+<div class='conPaid' *ngIf='paid'>
+  <app-to-pay  *ngIf="authService.loggedIn()" [menu]='menus'></app-to-pay>
+
+</div>
+
+
+

@@ -1,0 +1,33 @@
+.IC{
+    /*font-family: 'Playfair Display', serif;*/
+    background-image: radial-gradient(circle at 50% 50%, #e37d1c 0, #e07717 50%, #dd7112 100%);
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+
+
+
+}
+
+
+
+.e{
+    /*font-family: 'Playfair Display', serif;*/
+    font-size: large
+
+}
+
+
+.c{
+    /*font-family: 'Playfair Display', serif;*/
+    font-size: large;
+
+
+}
+
+.btn{
+    /*font-family: 'Playfair Display', serif;*/
+    color: black;
+    background-image: radial-gradient(circle at 50% 50%, #fbb53e 0, #f8b038 50%, #f5ab32 100%);
+    font-size: x-large;
+}

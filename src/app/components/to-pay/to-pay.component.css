@@ -1,0 +1,55 @@
+.containerPay{
+  background-color: #fff;
+
+
+}
+
+.buttonC{
+  display: flex;
+  justify-content: right;
+  background: #fff;
+  width: 100%;
+}
+
+.buttonC button{
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+}
+.pay{
+  background-color: #555;
+}
+
+.pay:hover{
+  background-color: #858585;
+}
+
+.cancel{
+  background-color: #c82333;
+}
+
+.cancel:hover{
+  background-color: #f83333;
+}
+
+.dinero{
+  background-color: #555;
+  color: #fff;
+  display: flex;
+}
+
+.dinero div{
+width: 50%;
+}
+
+.dinero__conDer{
+  text-align: right;
+  padding-right: 5px;
+}
+
+
+
